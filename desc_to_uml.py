@@ -4,9 +4,6 @@ from typing import List, Any
 
 from desc import ClassDesc
 
-# TODO: refactor to use "stringbuilding" = store strings in list and join in the end
-# https://waymoot.org/home/python_string/
-
 
 def desc_to_uml(data: List[Any], plantuml_path: Path) -> None:
     with plantuml_path.open('w') as uml:
