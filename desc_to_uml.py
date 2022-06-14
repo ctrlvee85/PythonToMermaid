@@ -7,13 +7,10 @@ from desc import ClassDesc
 
 def desc_to_uml(data: List[Any], plantuml_path: Path) -> None:
     with plantuml_path.open('w') as uml:
-        uml.write("```mermaid\n\n")
+        uml.write("```mermaid\n")
         uml.write("classDiagram\n\n")
         uml.write(class_defs(data))
-        # uml.write("hide empty members\n\n")
-
         uml.write(inheritance(data))
-        uml.write(docstrings(data))
         uml.write("\n```")
     create_plantuml(plantuml_path)
 
